@@ -5,7 +5,7 @@ function announce(title,text,time)
         Duration = time;
     })
 end
-announce("Cracked by KILLA_ant0", "Silent Aim", 3)
+announce("rays aim bot", "Silent Aim", 3)
 local Aiming = loadstring(game:HttpGet("https://pastebin.com/raw/wy4vTkmn"))()
 Aiming.TeamCheck(false)
 local Workspace = game:GetService("Workspace")
@@ -17,9 +17,9 @@ local Mouse = LocalPlayer:GetMouse()
 local CurrentCamera = Workspace.CurrentCamera
 local DaHoodSettings = {
     SilentAim = true,
-    AimLock = false,
-    Prediction = 0.138,
-    AimLockKeybind = Enum.KeyCode.P
+    AimLock = true,
+    Prediction = 0.1,
+    AimLockKeybind = Enum.KeyCode.Q
 }
 getgenv().DaHoodSettings = DaHoodSettings
 function Aiming.Check()
