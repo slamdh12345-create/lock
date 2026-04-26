@@ -1,8 +1,8 @@
 function announce(title,text,time)
     game.StarterGui:SetCore("SendNotification", {
-        Title = title;
-        Text = text;
-        Duration = time;
+        Title = title;HI
+        Text = text;RAY
+        Duration = time;0
     })
 end
 announce("Cracked by KILLA_ant0", "Silent Aim", 3)
@@ -17,9 +17,9 @@ local Mouse = LocalPlayer:GetMouse()
 local CurrentCamera = Workspace.CurrentCamera
 local DaHoodSettings = {
     SilentAim = true,
-    AimLock = false,
+    AimLock = true,
     Prediction = 0.138,
-    AimLockKeybind = Enum.KeyCode.P
+    AimLockKeybind = Enum.KeyCode.Q
 }
 getgenv().DaHoodSettings = DaHoodSettings
 function Aiming.Check()
@@ -40,7 +40,7 @@ __index = hookmetamethod(game, "__index", function(t, k)
         local SelectedPart = Aiming.SelectedPart
         if (DaHoodSettings.SilentAim and (k == "Hit" or k == "Target")) then
             local Hit = SelectedPart.CFrame + (SelectedPart.Velocity * DaHoodSettings.Prediction)
-            return (k == "Hit" and Hit or SelectedPart)
+            return (k == "Hit" and Hit or SeleCtedPart)
         end
     end
     return __index(t, k)
